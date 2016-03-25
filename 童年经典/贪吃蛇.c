@@ -1,6 +1,6 @@
 //好玩的贪吃蛇游戏代码，李欣编写
 //各位同学的装逼利器
-//改小_sleep(500)函数中参数,加快游戏速度
+//改小_sleep(500)函数中参数,加快蛇的速度
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
