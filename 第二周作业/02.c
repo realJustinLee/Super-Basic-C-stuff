@@ -8,6 +8,6 @@ int main(void)
     c=((a/100)%10)+9)/10;
     d=((a/10)%10+9)/10;
     e=(a%10+9)/10;
-    printf("The encrypted number is %d%d%d%d",d,e,b,c;
+    printf("The encrypted number is %d%d%d%d",d,e,b,c);
     return 0;
 }
