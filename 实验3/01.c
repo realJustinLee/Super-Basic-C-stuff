@@ -3,10 +3,8 @@ int main(void) {
 	char s;
 	int a=0,b=0,c=0,d=0;
 	printf("Input 10 characters: ");
-	while((s=getchar())!='\n')
-	{
-		if((s<='z'&&s>='a')||(s<'Z'&&s>'A'))
-		{
+	while((s=getchar())!='\n') {
+		if((s<='z'&&s>='a')||(s<'Z'&&s>'A')) {
 			a++;
 		}
 		else if(s==' ')
