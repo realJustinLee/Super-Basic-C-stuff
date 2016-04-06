@@ -10,7 +10,7 @@ int main (void){
 	if((c==0&&d!=0)||e==0){
 		printf("Leap year,");
 		f=29;
-		}
+	}
 	else
 		printf("Common year,");
 	if(b==3||b==4||b==5)
@@ -20,12 +20,12 @@ int main (void){
 	if(b==9||b==10||b==11)
 		printf("Fall,");
 	if(b==12||b==1||b==2)
-		printf("Winter,");	
+		printf("Winter,");
 	if(b==1||b==3||b==5||b==8||b==10||b==12)
-		printf("31");	
+		printf("31");
 	if(b==4||b==6||b==9||b==11)
-		printf("30");	
+		printf("30");
 	if(b==2)
-		printf("%d",f);	
+		printf("%d",f);
 	return 0;
 }

@@ -2,7 +2,7 @@
 int main(void)
 {
     double x,y;
-	printf("Enter x:");
+    printf("Enter x:");
     scanf("%lf", &x);
     if(x ==10){
         y =1./x;
