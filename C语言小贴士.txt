@@ -1,3 +1,4 @@
 C语言小贴士：（根据同学们反映的情况更新）
 1.C语言Windows开发IDE推荐Clion。
 2.pow函数要定义成double，不然会出bug。
+
