@@ -1,17 +1,17 @@
 #include <stdio.h>
 int main(void){
-    double n,i,zf=0,cj,jg=0;
-    printf("Enter n: ");
-    scanf("%lf",&n);
-    for (i = 1;  i<=n ; i++) {
-        printf("Enter grade #%.0f: ",i);
-        scanf("%lf",&cj);
-        zf=zf+cj;
-        if (cj>=60){
-            jg++;
-        }
+    double x,y;
+    printf("Enter x: ");
+    scanf("%lf",&x);
+    if (x<0){
+        y=-1;
     }
-    printf("Grade average=%.2f\n"
-                   "Number of passes=%.0f\n",zf/n,jg);
+    else if(x==0){
+        y=0;
+    }
+    else{
+        y=1;
+    }
+    printf("f(%.2f)=%.2f",x,y);
     return 0;
 }
