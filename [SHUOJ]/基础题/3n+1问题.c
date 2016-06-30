@@ -21,8 +21,7 @@ int cal(int str){
 int main(void){
     int i=0,str;
     while(scanf("%d",&str)!=EOF){
-        i++;
-        printf("Case %d: %d, %d\n",i,str,cal(str));
+        printf("Case %d: %d, %d\n",++i,str,cal(str));
     }
     return 0;
 }
