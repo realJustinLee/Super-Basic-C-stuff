@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+#include <float.h>
 
 int main(void) {
     printf("Limits in this system:\n"
@@ -23,7 +24,14 @@ int main(void) {
                    "ULLONG_MAX=%llu\n"
                    "LONG_LONG_MAX=%lld\n"
                    "LONG_LONG_MIN=%lld\n"
-                   "ULONG_LONG_MAX=%llu\n",
+                   "ULONG_LONG_MAX=%llu\n"
+                   "FLT_MANT_DIG=%d\n"
+                   "FLT_DIG=%d\n"
+                   "FLT_MIN_10_EXP=%d\n"
+                   "FLT_MAX_10_EXP=%d\n"
+                   "FLT_MAX=%f\n"
+                   "FLT_MIN=%f\n"
+                   "FLT_EPSILON=%f",
            CHAR_BIT,
            CHAR_MIN,
            CHAR_MIN,
@@ -44,6 +52,13 @@ int main(void) {
            ULLONG_MAX,
            LONG_LONG_MAX,
            LONG_LONG_MIN,
-           ULONG_LONG_MAX
+           ULONG_LONG_MAX,
+           FLT_MANT_DIG,
+           FLT_DIG,
+           FLT_MAX_10_EXP,
+           FLT_MIN_10_EXP,
+           FLT_MAX,
+           FLT_MIN,
+           FLT_EPSILON
     );
 }
