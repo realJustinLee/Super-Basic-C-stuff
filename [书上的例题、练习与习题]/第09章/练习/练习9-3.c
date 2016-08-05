@@ -1,10 +1,15 @@
 #include <stdio.h>
 
+struct birthday {
+    int yyyy, mm, dd;
+};
+
 struct student {
     int num;
     char name[10];
     int computer, english, math;
     double average;
+    struct birthday birth;
 };
 const int MaxSize = 50;
 int Count = 0;
@@ -19,6 +24,8 @@ void new_student(struct student students[]) {
     scanf("%d", &s.num);
     printf("Input the student's name:");
     scanf("%s", s.name);
+    printf("Input the student's birthday:");
+    scanf("%4d%2d%2d", &s.birth.yyyy, &s.birth.mm, &s.birth.dd);
     printf("Input the student's math score:");
     scanf("%d", &s.math);
     printf("Input the student's english score:");
@@ -45,6 +52,7 @@ void search_student(struct student students[], int num) {
     if (flag) {
         printf("num:%d,", students[i].num);
         printf("name:%s,", students[i].name);
+        printf("birthday:%04d-%02d-%02d", students[i].birth.yyyy, students[i].birth.mm, students[i].birth.dd);
         printf("math:%d,", students[i].math);
         printf("english:%d,", students[i].english);
         printf("computer:%d,", students[i].computer);
@@ -61,10 +69,11 @@ void output_student(struct student students[]) {
         printf("Count of students is zero!\n");
         return;
     }
-    printf("num\t name\t math\t english\t computer\t average\n");
+    printf("num\t name\t birthday\t math\t english\t computer\t average\n");
     for (i = 0; i < Count; i++) {
         printf("%d\t", students[i].num);
         printf("%s\t", students[i].name);
+        printf("%04d-%02d-%02d\t", students[i].birth.yyyy, students[i].birth.mm, students[i].birth.dd);
         printf("%d\t", students[i].math);
         printf("%d\t", students[i].english);
         printf("%d\t", students[i].computer);
