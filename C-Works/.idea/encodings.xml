@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/C-String/C_String01.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C-String/C_String01.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C-String/test01.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C-String3/declare.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C-String3/function.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C-String3/main.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C_String4/declare.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C_String4/huangcan_2_1.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C_String4/lixin_main.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/myString/mystring.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/判断素数.c" charset="GBK" />
+  </component>
+</project>
