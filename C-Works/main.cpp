@@ -188,7 +188,34 @@ using namespace std;
 //===================================================================
 
 
+class A;
 
+class B {
+public:
+    B(int x = 100) : b(x) {}
+
+    friend class A;
+
+private:
+    int b;
+};
+
+class A {
+public:
+    A(int x = 0) : a(x) {}
+
+    void g(B &b) {
+        cout << "[" << ++b.b << "]" << endl;
+        cout << b.b << endl;
+    }
+
+    friend void f(A &a, B &b) {
+        cout << "(" << (a.a += 10) << ")" << endl;
+    }
+
+private:
+    int a;
+};
 
 
 //===================================================================
@@ -293,5 +320,11 @@ int main() {
 //===================================================================
 
 
+    A a;
+    B b;
+    f(a, b);
+    f(a, b);
+    a.g(b);
+    a.g(b);
     return 0;
 }
