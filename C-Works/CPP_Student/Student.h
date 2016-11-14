@@ -9,17 +9,28 @@ using namespace std;
 
 class Student {
 public:
-    Student(char *Id = "00000000", string Name = "NoName", char Gender = 'm', int Age = 20);
+    Student(string Id, string Name);
 
-    Student(string Id, char *pName = "Null", char Gender = 'f', int Age = 20);
+    Student(const Student &s);
+
+    ~Student();
 
     void Show() const;
 
+    static int GetNum();
+
+    static string GetMonitor();
+
+    static string GetTutor();
+
+    static void SetMonitor(string Monitor);
+
+    static void SetTutor(string Tutor);
+
 private:
-    char id[9];
-    string name;
-    char gender;
-    int age;
+    string id, name;
+    static string monitor, tutor;
+    static int num;
 };
 
 #endif //CPP_STUDENT_STUDENT_H

@@ -1,24 +1,35 @@
 #include "Student.h"
 
-Student::Student(char *Id, string Name, char Gender, int Age) {
-    strncpy(id, Id, sizeof(id));
-    id[sizeof(id) - 1] = '\0';
-    name = Name;
-    gender = (Gender == 'm' || Gender == 'm') ? 'M' : 'F';
-    age = Age;
+int Student::num = 0;
+string Student::monitor = "NULL";
+string Student::tutor = "HZZ";
+
+Student::Student(string Id, string Name) : id(Id), name(Name) {
+    cout << "New Classmate " << name << " (" << ++num << ")" << endl;
 }
 
-Student::Student(string Id, char *pName, char Gender, int Age) {
-    strncpy(id, Id, sizeof(id));
-    id[sizeof(id) - 1] = '\0';
-    name = pName;
-    gender = (Gender == 'm' || Gender == 'm') ? 'M' : 'F';
-    age = Age;
+Student::Student(const Student &s) : id(s.id), name(s.name) {
+    cout << "New Classmate " << name << " (" << ++num << ")" << endl;
+}
+
+Student::~Student() {
+    cout << "Removing a Classmate " << name << " (" << --num << ")" << endl;
 }
 
 void Student::Show() const {
-    cout << setw(8) << id << " "
-         << setw(8) << name << " "
-         << (gender == 'M' ? "Male" : "Female")
-         << " " << age << endl;
+    cout << "ID: " << id << "\t name: " << name << endl;
+}
+
+int Student::GetNum() { return num; }
+
+string Student::GetMonitor() { return monitor; }
+
+string Student::GetTutor() { return tutor; }
+
+void Student::SetMonitor(string Monitor) {
+    monitor = Monitor;
+}
+
+void Student::SetTutor(string Tutor) {
+    tutor = Tutor;
 }
